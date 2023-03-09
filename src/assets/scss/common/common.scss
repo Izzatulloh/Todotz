@@ -13,9 +13,6 @@ ul{
 .container{
     @include container()
 }
-.row{
-    @include row()
-}
 button{
     outline: none;
     border: none;

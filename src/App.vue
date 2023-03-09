@@ -46,7 +46,6 @@
     <AddBtn v-if="!search" @modalOpen="modalOpen = true" />
   </div>
 
-  <router-view />
 </template>
 <script>
 import Navbar from "@/components/Navbar.vue";
@@ -154,9 +153,7 @@ export default {
       let array = this.notes;
       let search = this.searchInput;
       if (!search) return array;
-      // bo'sh joy o'chirish va harflarni kichiklashtrsh
       search = search.trim().toLowerCase();
-      // filtrlash
       array = array.filter((item) => {
         if (item.title.toLowerCase().indexOf(search) !== -1) return item;
       });
@@ -177,41 +174,4 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-@import "./assets/scss/main.scss";
-.appbar {
-  position: relative;
-  padding-bottom: 50px;
-  &__btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    padding: 20px;
-    background: linear-gradient(0deg, rgba(103, 80, 164, 0.11), rgba(103, 80, 164, 0.11)),
-      #fffbfe;
-    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
-  }
-}
 
-.note__off {
-  text-align: center;
-  margin-top: 30px;
-  text-transform: uppercase;
-}
-/*
-  Enter and leave animations can use different
-  durations and timing functions.
-*/
-
-.add-enter-active,
-.add-leave-active {
-  transition: 0.5s ease;
-}
-
-.add-enter-from,
-.add-leave-to{
-  opacity: 0;
-}
-
-</style>
