@@ -100,7 +100,7 @@
 
   &__btns {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 5px;
     margin-top: 30px;
 
@@ -216,7 +216,7 @@
 
   &__btns {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 5px;
 
     .btn {
@@ -319,7 +319,7 @@
 @media(max-width:350px) {
   .card__btns {
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     gap: 0;
 
     .btn {
