@@ -137,7 +137,7 @@ export default {
   created() {
     let localNotes = localStorage.getItem("notes");
     let id = localStorage.getItem("id");
-    this.lang = localStorage.lang || "uz";
+    this.lang = localStorage.language || "uz";
     this.langWord = lang;
 
     if (localNotes) {
@@ -163,7 +163,9 @@ export default {
     idCount() {
       localStorage.setItem("id", JSON.stringify(this.idCount));
     },
-
+    lang(){
+      localStorage.setItem('language',this.lang)
+    },
     notes: {
       handler(array) {
         localStorage.setItem("notes", JSON.stringify(array));
