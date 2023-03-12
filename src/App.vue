@@ -122,7 +122,6 @@ export default {
     },
 
     saveNote(CardObj) {
-      console.log(CardObj);
       for (let i = 0; i < this.notes.length; i++) {
         if (this.notes[i].id == CardObj.id) {
           this.notes[i].title = CardObj.title;
