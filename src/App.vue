@@ -83,7 +83,7 @@ export default {
       })
     },
     changeLang(value) {
-      this.lang = localStorage.lang = value;
+      this.lang = localStorage.language = value;
     },
     removeNote(cardId) {
       for (let i = 0; i < this.notes.length; i++) {
